@@ -1,6 +1,6 @@
 {
   "name": "@kingcharleslzy-ai/dsh-selection-quote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Select text in a DSH conversation and quote it into the composer as an atomic chip; sent quotes render as collapsible cards that can jump back to their source.",
   "type": "module",
   "engines": {
