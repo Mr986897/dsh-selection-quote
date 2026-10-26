@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Selection Quote · plugin source",
+    "zh": "引用选中 · 插件源"
+  },
+  "description": {
+    "en": "Self-hosted index for @kingcharleslzy-ai/dsh-selection-quote.",
+    "zh": "@kingcharleslzy-ai/dsh-selection-quote 的自建插件源。"
+  },
+  "plugins": [
+    {
+      "name": "@kingcharleslzy-ai/dsh-selection-quote",
+      "title": {
+        "en": "Selection Quote",
+        "zh": "引用选中"
+      },
+      "description": {
+        "en": "Select text in the conversation and a floating pill inserts it into the composer as a non-editable quote capsule; hover the capsule to read the full quote.",
+        "zh": "在会话里选中文字，浮出的「引用」按钮把这段内容作为不可编辑的引用胶囊插入输入框，悬停胶囊可看完整引用内容。"
+      },
+      "author": "Mr986897",
+      "homepage": "https://github.com/Mr986897/dsh-selection-quote#readme",
+      "repository": {
+        "url": "https://github.com/Mr986897/dsh-selection-quote"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNlbGVjdGlvbiBRdW90ZSI+CiAgPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTYiIGZpbGw9IiMyZjZiZmYiLz4KICA8cGF0aCBkPSJNMjcuMiAxNy42Yy01LjYgMy4yLTkuMiA4LTkuMiAxMy42IDAgNS40IDMuMiA5LjIgOCA5LjIgMy45IDAgNi43LTIuOCA2LjctNi41IDAtMy42LTIuNS02LjItNi02LjItLjggMC0xLjUuMS0yIC4zLjctMi40IDIuOS00LjggNS43LTYuNGwtMy4yLTRabTIzLjYgMGMtNS42IDMuMi05LjIgOC05LjIgMTMuNiAwIDUuNCAzLjIgOS4yIDggOS4yIDMuOSAwIDYuNy0yLjggNi43LTYuNSAwLTMuNi0yLjUtNi4yLTYtNi4yLS44IDAtMS41LjEtMiAuMy43LTIuNCAyLjktNC44IDUuNy02LjRsLTMuMi00WiIgZmlsbD0iI2ZmZmZmZiIvPgogIDxyZWN0IHg9IjE0IiB5PSI0NSIgd2lkdGg9IjM2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+Cg==",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1793010995,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Mr986897/dsh-selection-quote",
+            "commit": "5c6746f94e82c660ab1b96cf784de30d4e514e0b"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.1 <0.2.2-0"
+          }
+        }
+      ]
+    }
+  ]
+}
