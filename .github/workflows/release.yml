@@ -1,0 +1,45 @@
+# Every push that changes the bundle becomes a release: patch version bumped,
+# market index rebuilt for that commit, both committed back to the same branch.
+# The DSH side then only has to update its install (see market/PUBLISHING.md).
+name: Release plugin and index
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'client.js'
+      - 'index.js'
+      - 'cordis.patch.yml'
+      - 'locale/**'
+      - 'icon.svg'
+      - 'scripts/build-index.mjs'
+      - 'scripts/bump-version.mjs'
+permissions:
+  contents: write
+concurrency:
+  group: release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Bump the patch version
+        run: node scripts/bump-version.mjs
+      - name: Commit the release commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -am "chore(release): $(node -p "require('./package.json').version")"
+      - name: Build the market index for this release commit
+        run: node scripts/build-index.mjs . --repo "https://github.com/${{ github.repository }}"
+      - name: Commit the index
+        run: |
+          git add index.json
+          git commit -m "chore(market): $(node -p "require('./package.json').version") [skip ci]"
+      - name: Push both commits
+        run: git push origin "HEAD:${GITHUB_REF_NAME}"
