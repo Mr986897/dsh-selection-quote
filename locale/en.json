@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Selection Quote",
+    "description": "Select text in the conversation and a floating pill inserts it into the composer as a non-editable quote capsule; hover the capsule to read the full quote."
+  }
+}

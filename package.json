@@ -1,0 +1,44 @@
+{
+  "name": "@kingcharleslzy-ai/dsh-selection-quote",
+  "version": "1.0.0",
+  "description": "Select text in a DSH conversation and quote it into the composer as an atomic chip; sent quotes render as collapsible cards that can jump back to their source.",
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.1-rc.1 <0.2.2-0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "quote",
+    "citation",
+    "composer",
+    "ui"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
